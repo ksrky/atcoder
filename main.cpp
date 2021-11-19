@@ -1,26 +1,13 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 
+#define rep(i, n) for(int i=0;i<n;++i)
 using namespace std;
+typedef long long ll;
 
 int main() {
-    int n = 3;
-    cout << n << endl;
-    cout << &n << endl;
-
-    vector<int> v = {1, 2, 3};
-    for (int x: v) {
-        cout << x << endl;
-    }
-    for (int &x: v) {
-        cout << &x << endl;
-    }
-
-    vector<char> c={'a', 'b', 'c'};
-    for (char x:c) {
-        cout << x << endl;
-    }
-    for (char &x: c) {
-        cout << &x << endl;
-    }
-    return 0;
+        int h, w;
+        cin >> h >> w;
+        const int INF = 1 << 29;
+        int a[2005][1205];
+        cout << h << w << endl;
 }
