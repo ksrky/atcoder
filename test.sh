@@ -1,7 +1,7 @@
 #!/bin/bash
 
 problem_name=$1
-contest_name=abc190
+contest_name=abc182
 test_dir=test/${problem_name}
 
 cd ${contest_name}
