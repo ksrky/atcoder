@@ -1,7 +1,7 @@
 #!/bin/bash
 
 problem_name=$1
-contest_name=abc201
+contest_name=abc190
 test_dir=test/${problem_name}
 
 cd ${contest_name}
@@ -11,4 +11,5 @@ if [ ! -d ${test_dir} ]; then
 fi
 
 g++ ${problem_name}.cpp -o target/${problem_name}.out
-oj test -c target/${problem_name}.out test/${problem_name}/*
+oj t -c target/${problem_name}.out test/${problem_name}/*
+# oj t -c target/${problem_name}.out test/${problem_name}/* -e 1e-5

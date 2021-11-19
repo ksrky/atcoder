@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(atcoder)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CONTEST_NAME abc201)
+set(CONTEST_NAME abc190)
 
 add_executable(main main.cpp)
 add_executable(a ${CONTEST_NAME}/a.cpp)
