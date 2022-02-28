@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+TabWidth: 8
+---
+Language: Cpp
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: Always
+AllowShortLoopsOnASingleLine: true
+BreakBeforeBraces: Custom
+ColumnLimit: 150
+IncludeBlocks: Merge
+IndentCaseLabels: false
+IndentWidth: 8
+PointerAlignment: Right
+Standard: c++17

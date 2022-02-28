@@ -1,7 +1,7 @@
 #!/bin/bash
 
 problem_name=$1
-contest_name=abc171
+contest_name=abc241
 
 cd ${contest_name}
 

@@ -37,3 +37,5 @@ echo "[INFO] Replacing contest name..."
 sed -i -e "s/set(CONTEST_NAME .*)/set(CONTEST_NAME $contest_name)/g" ./CMakeLists.txt
 sed -i -e "s/^contest_name=.*/contest_name=$contest_name/g" ./test.sh
 sed -i -e "s/^contest_name=.*/contest_name=$contest_name/g" ./submit.sh
+
+echo "[INFO] Done!"
