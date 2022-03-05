@@ -3,7 +3,7 @@ TabWidth: 8
 ---
 Language: Cpp
 AllowShortBlocksOnASingleLine: Always
-AllowShortIfStatementsOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: true
 BreakBeforeBraces: Custom
 ColumnLimit: 150

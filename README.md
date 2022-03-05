@@ -1,9 +1,5 @@
 # ksrk's AtCoder archives
 
-### Environment
-* OS: Ubuntu 20.04
-* Editor: CLion
-
 ## Set up a project directory of a contest
 ```commandline
 chmod 755 setup.sh
