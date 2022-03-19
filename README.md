@@ -3,8 +3,9 @@
 ## Set up a project directory of a contest
 ```commandline
 chmod 755 setup.sh
-./setup.sh contest_name
+./setup.sh contest_dir contest_name
 ```
+contest_dir will be abc, agc ...  
 contest_name will be abc226, agc055 ...
 
 ## Test your code

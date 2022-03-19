@@ -1,10 +1,11 @@
 #!/bin/bash
 
 problem_name=$1
-contest_name=abc243
+contest_dir=abc
+contest_name=abc237
 test_dir=test/${problem_name}
 
-cd ${contest_name}
+cd ${contest_dir}/${contest_name}
 
 if [ ! -d ${test_dir} ]; then
   oj dl -d ${test_dir} https://atcoder.jp/contests/${contest_name}/tasks/${contest_name}_${problem_name}
