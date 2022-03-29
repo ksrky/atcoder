@@ -1,22 +1,19 @@
 # ksrk's AtCoder archives
 
-## Set up a project directory of a contest
+## Set up
 ```commandline
-chmod 755 setup.sh
 ./setup.sh contest_dir contest_name
 ```
-contest_dir will be abc, agc ...  
-contest_name will be abc226, agc055 ...
+where *contest_dir* is the kind of the contest, eg. *abc, agc ...*    
+and *contest_name* is the name of the contest, eg. *abc226, agc055 ...*
 
-## Test your code
+## Run test
 ```commandline
-chmod 755 test.sh
 ./test.sh problem_name
 ```
-problem_name will be a, b, c, d, e, f
+where *problem_name* is the name of the problem you want to run test, eg. *a, b, c, d ...*
 
-## Submit your code
+## Submit
 ```commandline
-chmod 755 submit.sh
 ./submit.sh problem_name
 ```

@@ -3,9 +3,9 @@ project(atcoder)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CONTEST_DIR abc)
-set(CONTEST_NAME abc237)
+set(CONTEST_NAME abc245)
 
-add_executable(main main.cpp)
+add_executable(exp experiment/exp.cpp)
 add_executable(a ${CONTEST_DIR}/${CONTEST_NAME}/a.cpp)
 add_executable(b ${CONTEST_DIR}/${CONTEST_NAME}/b.cpp)
 add_executable(c ${CONTEST_DIR}/${CONTEST_NAME}/c.cpp)

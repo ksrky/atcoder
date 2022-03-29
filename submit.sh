@@ -2,7 +2,7 @@
 
 problem_name=$1
 contest_dir=abc
-contest_name=abc237
+contest_name=abc245
 
 cd ${contest_dir}/${contest_name}
 
