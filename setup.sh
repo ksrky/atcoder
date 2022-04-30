@@ -1,7 +1,8 @@
 #!/bin/bash
 
-contest_dir=$1
-contest_name=$2
+read -r -p "Enter contest kind: " contest_dir
+read -r -p "Enter contest name: " contest_name
+read -r -p "Enter the number of problems: " n_problem
 
 problem_list=(a b c d e f)
 
@@ -17,21 +18,21 @@ int main() {
 EOS
 )
 
-if [ ! -d ${contest_dir} ]; then
-  mkdir ${contest_dir}
+if [ ! -d "$contest_dir" ]; then
+  mkdir "$contest_dir"
 fi
-cd ${contest_dir}
+cd "$contest_dir" || exit
 
-if [ ! -d ${contest_name} ]; then
+if [ ! -d "$contest_name" ]; then
   echo "[INFO] Creating files..."
-  mkdir ${contest_name}
-  cd ${contest_name}
+  mkdir "$contest_name"
+  cd "$contest_name" || exit
   mkdir target \test
 
   for file in "${problem_list[@]}"
   do
-      touch ${file}.cpp
-      echo "$template" > ${file}.cpp
+      touch "$file".cpp
+      echo "$template" > "$file".cpp
   done
   cd ..
   echo "[INFO] Done!"

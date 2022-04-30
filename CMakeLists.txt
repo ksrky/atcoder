@@ -2,10 +2,10 @@
 project(atcoder)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CONTEST_DIR abc)
-set(CONTEST_NAME abc231)
+set(CONTEST_DIR extra)
+set(CONTEST_NAME typical_algorithm)
 
-add_executable(exp experiment/exp.cpp)
+add_executable(exp _experiment/exp.cpp)
 add_executable(a ${CONTEST_DIR}/${CONTEST_NAME}/a.cpp)
 add_executable(b ${CONTEST_DIR}/${CONTEST_NAME}/b.cpp)
 add_executable(c ${CONTEST_DIR}/${CONTEST_NAME}/c.cpp)
