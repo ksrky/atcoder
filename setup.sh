@@ -1,10 +1,20 @@
 #!/bin/bash
 
-read -r -p "Enter contest kind: " contest_dir
+read -r -p "Enter contest kind(default 'abc'): " contest_dir
 read -r -p "Enter contest name: " contest_name
-read -r -p "Enter the number of problems: " n_problem
+read -r -p "Enter problem names(default 'a b c d e f'): " -a problems
 
-problem_list=(a b c d e f)
+if [ -z "$contest_dir" ]; then
+  contest_dir=abc
+fi
+
+if [ -z "$contest_name" ]; then
+  echo "ERROR: Please enter the contest name."
+fi
+
+if [ -z "$problem_names" ]; then
+  problems=(a b c d e f)
+fi
 
 template=$(cat <<EOS
 #include <bits/stdc++.h>
@@ -29,7 +39,7 @@ if [ ! -d "$contest_name" ]; then
   cd "$contest_name" || exit
   mkdir target \test
 
-  for file in "${problem_list[@]}"
+  for file in "${problems[@]}"
   do
       touch "$file".cpp
       echo "$template" > "$file".cpp
