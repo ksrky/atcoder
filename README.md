@@ -2,11 +2,15 @@
 
 ## Set up
 ```commandline
-./setup.sh contest_dir contest_name
+./setup.sh
+Enter contest kind: <contest_dir>
+Enter contest name: <typical_name>
+Enter the number of problems: <n_problem>
+
 ```
 where *contest_dir* is the kind of the contest, eg. *abc, agc ...*    
-and *contest_name* is the name of the contest, eg. *abc226, agc055 ...*
-
+and *contest_name* is the name of the contest, eg. *abc226, agc055 ...*  
+After you enter *n_problem*, automatically creates cpp files.
 ## Run test
 ```commandline
 ./test.sh problem_name

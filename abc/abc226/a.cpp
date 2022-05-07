@@ -1,9 +1,9 @@
-    #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 
-    using namespace std;
+using namespace std;
 
-    int main() {
+int main() {
         double x;
         cin >> x;
         cout << int(x + 0.5) << endl;
-    }
+}

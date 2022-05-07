@@ -1,8 +1,8 @@
 #!/bin/bash
 
 problem_name=$1
-contest_dir=extra
-contest_name=typical_algorithm
+contest_dir=abc
+contest_name=abc226
 test_dir=test/${problem_name}
 
 cd ${contest_dir}/${contest_name} || exit
