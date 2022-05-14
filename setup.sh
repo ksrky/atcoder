@@ -10,11 +10,15 @@ fi
 
 if [ -z "$contest_name" ]; then
   echo "ERROR: Please enter the contest name."
+  exit 1
 fi
 
 if [ -z "$problem_names" ]; then
   problems=(a b c d e f)
 fi
+
+echo "[INFO] contest kind: '${contest_dir}'"
+echo "[INFO] contest name: '${contest_name}'"
 
 template=$(cat <<EOS
 #include <bits/stdc++.h>
