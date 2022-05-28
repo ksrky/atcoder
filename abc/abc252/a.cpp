@@ -3,7 +3,9 @@
 using namespace std;
 using ll = long long;
 
-
 int main() {
-
+        int n;
+        cin >> n;
+        printf("%c", 'a' + (n - 97));
+        cout << endl;
 }

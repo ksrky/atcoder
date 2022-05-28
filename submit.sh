@@ -2,7 +2,7 @@
 
 problem_name=$1
 contest_dir=abc
-contest_name=abc250
+contest_name=abc253
 
 cd ${contest_dir}/${contest_name} || exit
 
