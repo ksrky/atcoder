@@ -1,40 +1,38 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+using ll = long long;
 
-const int INF = 1e9;
-int a;
-int memo[1000005] = {0};
+ll a;
 
-int rotate(int n) {
-        if (n % 10 == 0) return INF;
+int rotate(ll n) {
         string s = to_string(n);
-        s = s.substr(1, s.size() - 1) + s[0];
+        s = s[s.size() - 1] + s.substr(0, s.size() - 1);
         return stoi(s);
 }
 
-int calc(int n, int r) {
-        if (n == 1) return 0;
-        if (memo[n] != 0) return memo[n];
-        bool b = r + 1 == to_string(n).size();
-        if (b && n % a == 0) return memo[n] = calc(n / a, 0) + 1;
-        if (!b && n % a == 0) return memo[n] = min(calc(n / a, 0), calc(rotate(n), r + 1)) + 1;
-        if (!b) return memo[n] = calc(rotate(n), r + 1) + 1;
-        return memo[n] = INF;
-}
-
 int main() {
-        int n;
+        ll n;
         cin >> a >> n;
-        int dp[1000000];
-        for (int i = 0; i < 1000000; i++) dp[i] = INF;
-        dp[1] = 0;
-        for (int i = 1; i < pow(10, to_string(n).size()); i++) {
-                dp[a * i] = min(dp[a * i], dp[i] + 1);
-                dp[rotate(i)] = min(dp[rotate(i)], dp[i] + 1);
+        ll m = pow(10, to_string(n).size());
+        vector<ll> ds(m, -1);
+        ds[1] = 0;
+        queue<ll> que;
+        que.push(1);
+        while (!que.empty()) {
+                ll v = que.front();
+                que.pop();
+                ll v1 = v * a;
+                if (v1 < m && ds[v1] == -1) {
+                        ds[v1] = ds[v] + 1;
+                        que.push(v1);
+                }
+                if (v % 10 == 0) continue;
+                ll v2 = rotate(v);
+                if (v2 < m && ds[v2] == -1) {
+                        ds[v2] = ds[v] + 1;
+                        que.push(v2);
+                }
         }
-        cout << dp[n] << endl;
-        //int ans = calc(n, false);
-        //if (ans < INF) cout << ans << endl;
-        //else cout << -1 << endl;
+        cout << ds[n] << endl;
 }

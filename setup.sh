@@ -2,6 +2,12 @@
 
 read -r -p "Enter contest kind(default 'abc'): " contest_dir
 read -r -p "Enter contest name: " contest_name
+
+if [ -d "$contest_name" ]; then
+  echo "[INFO] The directory already exists."
+  exit 0
+fi
+
 read -r -p "Enter problem names(default 'a b c d e f'): " -a problems
 
 if [ -z "$contest_dir" ]; then
@@ -37,22 +43,18 @@ if [ ! -d "$contest_dir" ]; then
 fi
 cd "$contest_dir" || exit
 
-if [ ! -d "$contest_name" ]; then
-  echo "[INFO] Creating files..."
-  mkdir "$contest_name"
-  cd "$contest_name" || exit
-  mkdir target \test
+echo "[INFO] Creating files..."
+mkdir "$contest_name"
+cd "$contest_name" || exit
+mkdir target \test
 
-  for file in "${problems[@]}"
-  do
-      touch "$file".cpp
-      echo "$template" > "$file".cpp
-  done
-  cd ..
-  echo "[INFO] Done!"
-else
-  echo "[INFO] The directory already exists."
-fi
+for file in "${problems[@]}"
+do
+    touch "$file".cpp
+    echo "$template" > "$file".cpp
+done
+cd ..
+echo "[INFO] Done!"
 
 cd ../
 
