@@ -43,18 +43,22 @@ if [ ! -d "$contest_dir" ]; then
 fi
 cd "$contest_dir" || exit
 
-echo "[INFO] Creating files..."
-mkdir "$contest_name"
-cd "$contest_name" || exit
-mkdir target \test
+if [ ! -d "$contest_name" ]; then
+  echo "[INFO] Creating files..."
+  mkdir "$contest_name"
+  cd "$contest_name" || exit
+  mkdir target \test
 
-for file in "${problems[@]}"
-do
-    touch "$file".cpp
-    echo "$template" > "$file".cpp
-done
-cd ..
-echo "[INFO] Done!"
+  for file in "${problems[@]}"
+  do
+      touch "$file".cpp
+      echo "$template" > "$file".cpp
+  done
+  cd ..
+  echo "[INFO] Done!"
+else
+  echo "[INFO] The directory already exists."
+fi
 
 cd ../
 
