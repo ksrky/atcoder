@@ -2,12 +2,6 @@
 
 read -r -p "Enter contest kind(default 'abc'): " contest_dir
 read -r -p "Enter contest name: " contest_name
-
-if [ -d "$contest_name" ]; then
-  echo "[INFO] The directory already exists."
-  exit 0
-fi
-
 read -r -p "Enter problem names(default 'a b c d e f'): " -a problems
 
 if [ -z "$contest_dir" ]; then

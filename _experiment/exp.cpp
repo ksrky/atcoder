@@ -7,8 +7,8 @@ const ll mod = 998244353;
 
 int main() {
         vector<int> v = {1, 2, 5};
-        auto it = lower_bound(v.begin(), v.end(), 4);
-        int pos = distance(it, v.end());
+        auto it = upper_bound(v.begin(), v.end(), 5);
+        int pos = distance(v.begin(), it);
         cout << *it << endl;
         cout << pos << endl;
 }
